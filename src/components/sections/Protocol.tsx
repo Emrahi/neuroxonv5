@@ -66,12 +66,12 @@ export function Protocol() {
             </div>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4 items-stretch">
             {protocolItems.map((item, index) => (
               <GlassCard 
                 key={index}
                 delay={index * 0.1}
-                className="flex flex-col gap-4"
+                className="flex flex-col gap-4 h-full"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
                   <item.icon size={24} />
