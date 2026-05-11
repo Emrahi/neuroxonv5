@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Manifesto } from "@/components/sections/Manifesto";
 import { Protocol } from "@/components/sections/Protocol";
@@ -7,20 +8,14 @@ import { IndividualProducts } from "@/components/sections/IndividualProducts";
 
 export default function Home() {
   return (
-    <main className="bg-background min-h-screen">
+    <main className="bg-background min-h-screen flex flex-col">
       <Navbar />
       <Hero />
       <Manifesto />
       <Protocol />
       <CorporateProducts />
       <IndividualProducts />
-      
-      {/* Simple Footer */}
-      <footer className="py-8 text-center border-t border-white/5 mt-auto">
-        <p className="text-muted-foreground text-sm">
-          © {new Date().getFullYear()} Neuroxon Institute. Tüm hakları saklıdır.
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }
