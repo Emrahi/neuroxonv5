@@ -6,16 +6,28 @@ import Image from "next/image";
 export function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden pt-24">
-      {/* Background Image with Dark Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-background">
         <Image
           src="/ag.jpeg"
           alt="Neuroxon Neural Background"
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-60"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
+        <motion.div
+          animate={{ opacity: [0, 1, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute inset-0"
+        >
+          <Image
+            src="/beyin.jpeg"
+            alt="Neuroxon Brain Background"
+            fill
+            className="object-cover opacity-60"
+            priority
+          />
+        </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
       </div>
 
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center max-w-7xl mx-auto px-6 w-full text-center py-12">
