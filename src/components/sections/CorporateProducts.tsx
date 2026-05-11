@@ -65,51 +65,55 @@ export function CorporateProducts() {
           </h3>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6 items-stretch">
           {products.map((product, index) => (
-            <GlassCard
-              key={index}
-              delay={index * 0.1}
-              className="flex flex-col h-full relative group overflow-hidden w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]"
+            <div 
+              key={index} 
+              className="flex w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex items-start gap-4 mb-6">
-                  <span className="text-3xl filter drop-shadow-md">{product.id}</span>
-                  <div>
-                    <h4 className="text-xl md:text-2xl font-bold font-heading text-white mb-2 group-hover:text-accent transition-colors">
-                      {product.title.split(': ')[0]}
-                    </h4>
-                    <span className="text-sm text-accent/80 font-medium">
-                      {product.title.split(': ')[1]}
-                    </span>
+              <GlassCard
+                delay={index * 0.1}
+                className="flex flex-col flex-1 relative group overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex items-start gap-4 mb-6">
+                    <span className="text-3xl filter drop-shadow-md">{product.id}</span>
+                    <div>
+                      <h4 className="text-xl md:text-2xl font-bold font-heading text-white mb-2 group-hover:text-accent transition-colors">
+                        {product.title.split(': ')[0]}
+                      </h4>
+                      <span className="text-sm text-accent/80 font-medium">
+                        {product.title.split(': ')[1]}
+                      </span>
+                    </div>
                   </div>
-                </div>
 
-                <p className="text-muted-foreground mb-6 font-medium text-lg border-l-2 border-primary pl-4">
-                  {product.desc}
-                </p>
+                  <p className="text-muted-foreground mb-6 font-medium text-lg border-l-2 border-primary pl-4">
+                    {product.desc}
+                  </p>
 
-                <div className="mt-auto space-y-4">
-                  <div className="bg-background/50 p-4 rounded-lg border border-white/5">
-                    <span className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">Alt Modüller</span>
-                    <p className="text-sm text-foreground/80 leading-relaxed">
-                      {product.modules}
-                    </p>
-                  </div>
-                  
-                  {product.output && (
-                    <div className="bg-primary/10 p-4 rounded-lg border border-primary/20">
-                      <span className="block text-xs uppercase tracking-widest text-accent mb-2">Çıktı</span>
-                      <p className="text-sm text-white font-medium">
-                        {product.output}
+                  <div className="mt-auto space-y-4">
+                    <div className="bg-background/50 p-4 rounded-lg border border-white/5">
+                      <span className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">Alt Modüller</span>
+                      <p className="text-sm text-foreground/80 leading-relaxed">
+                        {product.modules}
                       </p>
                     </div>
-                  )}
+                    
+                    {product.output && (
+                      <div className="bg-primary/10 p-4 rounded-lg border border-primary/20">
+                        <span className="block text-xs uppercase tracking-widest text-accent mb-2">Çıktı</span>
+                        <p className="text-sm text-white font-medium">
+                          {product.output}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </GlassCard>
+              </GlassCard>
+            </div>
           ))}
         </div>
       </div>
