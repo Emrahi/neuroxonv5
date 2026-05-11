@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col overflow-hidden pt-24">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -18,7 +18,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-center">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center max-w-7xl mx-auto px-6 w-full text-center py-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="relative z-10 pb-8 flex flex-col items-center gap-2 mt-auto"
       >
         <span className="text-xs text-muted-foreground uppercase tracking-widest">Keşfet</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-accent to-transparent" />
