@@ -65,12 +65,12 @@ export function CorporateProducts() {
           </h3>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {products.map((product, index) => (
             <GlassCard
               key={index}
               delay={index * 0.1}
-              className="flex flex-col h-full relative group overflow-hidden"
+              className="flex flex-col h-full relative group overflow-hidden w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               

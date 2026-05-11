@@ -71,7 +71,7 @@ export function Protocol() {
               <GlassCard 
                 key={index}
                 delay={index * 0.1}
-                className={`flex flex-col gap-4 ${index % 2 === 1 ? 'sm:mt-12' : ''}`}
+                className="flex flex-col gap-4"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
                   <item.icon size={24} />
