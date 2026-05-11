@@ -65,9 +65,12 @@ export function Navbar() {
           </a>
         </nav>
 
-        <button className="bg-accent text-accent-foreground px-6 py-2.5 rounded-full font-medium text-sm hover:bg-white transition-colors">
+        <a 
+          href="mailto:info@neuroxoninstitute.com"
+          className="bg-accent text-accent-foreground px-6 py-2.5 rounded-full font-medium text-sm hover:bg-white transition-colors inline-block text-center"
+        >
           Kurumsal Teklif Al
-        </button>
+        </a>
       </div>
     </motion.header>
   );

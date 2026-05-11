@@ -59,12 +59,18 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8"
           >
-            <button className="w-full sm:w-auto px-8 py-4 bg-accent text-accent-foreground rounded-full font-semibold text-lg hover:bg-white hover:scale-105 transition-all duration-300">
+            <a 
+              href="mailto:info@neuroxoninstitute.com"
+              className="w-full sm:w-auto px-8 py-4 bg-accent text-accent-foreground rounded-full font-semibold text-lg hover:bg-white hover:scale-105 transition-all duration-300 inline-block text-center"
+            >
               Kurumsal Teklif Al
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 glass text-white rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+            </a>
+            <a 
+              href="#protocol"
+              className="w-full sm:w-auto px-8 py-4 glass text-white rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300 inline-block text-center"
+            >
               Protokolü İncele
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </div>
